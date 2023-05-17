@@ -8,6 +8,10 @@
 
 SoftwareSerial Sensor (rxPin, txPin);
 
+// Defined Water Well dimensions [cm]
+float waterWellRadius = 40;
+float waterWellDepth = 400;
+
 // Defined values for A02YYUW ultrasonic Sensor
 unsigned char sensorData[4] = {};
 byte dataIndex = 0;
@@ -87,7 +91,7 @@ void calculateDistance() {
       if (calculatedDistance > 30)
       {
         distance = calculatedDistance; //CloudLength distance
-        calculateVolume(calculatedDistance, 400, 40); // depth=400;radius=40;
+        calculateVolume(calculatedDistance, waterWellDepth, waterWellRadius); // depth=400;radius=40;
       }
       else
       {
