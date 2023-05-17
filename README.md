@@ -84,7 +84,7 @@ calculateVolume(calculatedDistance, waterWellDepth, waterWellRadius);
 
 ## Different board pins
 
-If using different pins on your board for the sensor, you might need to change rx tx pins definition in code.
+If using different pins on your board for the sensor, you might need to change RX TX pins definitions in code.
 
 ```ino
 // Defined pins used by A02YYUW ultrasonic sensor
@@ -94,25 +94,25 @@ If using different pins on your board for the sensor, you might need to change r
 SoftwareSerial Sensor (rxPin, txPin);
 ```
 
-The full list of output pins to identifiers are as follows, taken from the [source code](https://github.com/esp8266/Arduino/blob/master/variants/d1_mini/pins_arduino.h#L49-L61):
+The list of output pins to identifiers are as follows, taken from the [source code](https://github.com/esp8266/Arduino/blob/master/variants/d1_mini/pins_arduino.h#L49-L61):
 
-| Labelled WeMos Pin Number | Arduino Pin Number constant to use | “Real” Microcontroller Pin Number |     |     |
-| :-----------------------: | :--------------------------------: | :-------------------------------: | --- | --- |
-|       Digital Pin 0       |                 D0                 |                16                 |     |     |
-|       Digital Pin 1       |                 D1                 |                 5                 |     |     |
-|       Digital Pin 2       |                 D2                 |                 4                 |     |     |
-|       Digital Pin 3       |                 D3                 |                 0                 |     |     |
-|       Digital Pin 4       |                 D4                 |                 2                 |     |     |
-|       Digital Pin 5       |                 D5                 |                14                 |     |     |
-|       Digital Pin 6       |                 D6                 |                12                 |     |     |
-|       Digital Pin 7       |                 D7                 |                13                 |     |     |
-|       Digital Pin 8       |                 D8                 |                15                 |     |     |
-|            TX             |                 TX                 |                 1                 |     |     |
-|            RX             |                 RX                 |                 3                 |     |     |
+| Labelled WeMos Pin Number | Arduino Pin Number constant to use | “Real” Microcontroller Pin Number |
+| :-----------------------: | :--------------------------------: | :-------------------------------: |
+|       Digital Pin 0       |                 D0                 |                16                 |
+|       Digital Pin 1       |                 D1                 |                 5                 |
+|       Digital Pin 2       |                 D2                 |                 4                 |
+|       Digital Pin 3       |                 D3                 |                 0                 |
+|       Digital Pin 4       |                 D4                 |                 2                 |
+|       Digital Pin 5       |                 D5                 |                14                 |
+|       Digital Pin 6       |                 D6                 |                12                 |
+|       Digital Pin 7       |                 D7                 |                13                 |
+|       Digital Pin 8       |                 D8                 |                15                 |
+|            TX             |                 TX                 |                 1                 |
+|            RX             |                 RX                 |                 3                 |
 
 # Fieldwork
 
-Sensor was placed on top of well, under its cover. A power supply used to provide electric power to the board was AC adapter and USB cable. WiFi coverage around the well is required.
+Sensor was placed on top of well, under its cover. A power supply used to provide electric power to the board was AC adapter and USB cable. WiFi coverage around the well was also provided.
 
 > :warning: Because of probe sensing angle 60° it was necessary to build a waveguide to block any echoes that aren't perpendicular to the sensor. I find [this article](https://www.apgsensors.com/about-us/blog/how-to-make-a-standpipe-and-wave-guide-for-your-ultrasonic-sensor) helpful.
 
@@ -123,3 +123,5 @@ Sensor was placed on top of well, under its cover. A power supply used to provid
 # Other useful links
 
 [Pin numbering for WeMos D1 Mini (ESP8266)](https://chewett.co.uk/blog/1066/pin-numbering-for-wemos-d1-mini-esp8266/)
+
+[How to make a standpipe and wave guide for your ultrasonic sensor](https://www.apgsensors.com/about-us/blog/how-to-make-a-standpipe-and-wave-guide-for-your-ultrasonic-sensor)
