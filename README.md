@@ -51,7 +51,7 @@ Set up Arduino IoT Cloud to send data between an ESP8266 development board and t
 -   Add and set up your **Device** as _3rd Party device_
 -   Create new **Thing**
     -   Associate Device
-    -   Add Cloud variables
+    -   Add Cloud variables as in [thingProperties.h](./thingProperties.h): `distance`, `waterLevel`, `waterVolume`
 -   Add your network credentials in the network section (_network name_, _network password_ and _secret key_)
 -   Program the board
     -   go to the "Sketch" tab
@@ -84,7 +84,7 @@ calculateVolume(calculatedDistance, waterWellDepth, waterWellRadius);
 
 ## Different board pins
 
-If using different pins on your board for the sensor, you might need to change RX TX pins definitions in code.
+If using different pins on your board for the sensor connection, you might need to change RX/TX pins definitions in code.
 
 ```ino
 // Defined pins used by A02YYUW ultrasonic sensor
@@ -112,7 +112,7 @@ The list of output pins to identifiers are as follows, taken from the [source co
 
 # Fieldwork
 
-Sensor was placed on top of well, under its cover. A power supply used to provide electric power to the board was AC adapter and USB cable. WiFi coverage around the well was also provided.
+Sensor was placed on top of the well, under its cover. A power supply used to provide electric power to the board was AC adapter and USB cable. WiFi coverage around the well was also provided.
 
 > :warning: Because of probe sensing angle 60° it was necessary to build a waveguide to block any echoes that aren't perpendicular to the sensor. I find [this article](https://www.apgsensors.com/about-us/blog/how-to-make-a-standpipe-and-wave-guide-for-your-ultrasonic-sensor) helpful.
 
